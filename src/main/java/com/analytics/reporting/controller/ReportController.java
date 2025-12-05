@@ -26,6 +26,7 @@ public class ReportController {
             if (!actualAppId.equalsIgnoreCase(appId)) {
                 return ResponseEntity.badRequest().body(" Cannot access report of other app ");
             }
+            //returns object
             Object res = reportService.getReport(appId);
             return ResponseEntity.ok(res);
         }
